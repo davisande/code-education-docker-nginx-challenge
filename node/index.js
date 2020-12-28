@@ -10,10 +10,10 @@ const config = {
 const mysql = require('mysql')
 const connection = mysql.createConnection(config)
 
-const insert_sql = `INSERT INTO people(nam) values('Davi')`
+const insert_sql = `INSERT INTO people(name) values('Davi')`
 connection.query(insert_sql)
 
-var html = `<h1>Full Cycle</h1>
+var html = `<h1>Full Cycle Rocks!</h1>
             <br/><br/>
             <h3>Lista de nomes:</h3>
             <br/>`

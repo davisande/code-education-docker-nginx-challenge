@@ -27,3 +27,10 @@ services:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=root
+
+  nginx:
+    build: 
+      context: nginx
+    container_name: nginx
+    ports: 
+      - "8080:80"
