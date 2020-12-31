@@ -6,7 +6,7 @@ services:
     build: 
       context: node
     container_name: app
-    entrypoint: dockerize -wait tcp://mysql:3306 -timeout 30s docker-entrypoint.sh bash -c "npm install && node index.js"
+    entrypoint: dockerize -wait tcp://mysql:3306 -timeout 60s docker-entrypoint.sh bash -c "npm install && node index.js"
     volumes: 
       - ./node:/usr/src/app
     tty: true
@@ -23,7 +23,7 @@ services:
     tty: true
     volumes: 
       - ./mysql:/var/lib/mysql
-      - ./init_mysql:/docker-entrypoint-initdb.d/init.sql
+      - ./init_mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment: 
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root

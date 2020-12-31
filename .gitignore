@@ -125,6 +125,6 @@ dist
 .ionide
 
 # Database files
-./mysql/
+mysql/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
